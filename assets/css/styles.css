@@ -520,3 +520,77 @@ textarea.input{min-height:90px;resize:vertical}
   .p-ml strong{font-size:1.75vw;white-space:nowrap}
   .ff-content{max-width:36vw}
 }
+
+/* ===== v3: alineación y escala tipográfica según capturas ===== */
+.container{width:min(1520px,100% - 6vw)}
+.driver-grid{width:min(1520px,100% - 6vw)}
+.hero h1,.hero p,.services-head *,.platform h2,.feature-list li,.ff-content *,.faq-intro h2,.faq-intro p,.driver-text *,.contact-text h2,.contact-text .lead,.contact-list li,.integ-title *,.op-wrap h2{text-shadow:0 2px 18px rgba(0,0,0,.65),0 1px 3px rgba(0,0,0,.5)}
+.eyebrow{text-shadow:0 1px 8px rgba(0,0,0,.8)}
+@media (min-width:921px){
+  /* hero */
+  .hero{justify-content:space-between;padding-top:0}
+  .hero-content{margin-top:0;padding-top:13vw;padding-bottom:0}
+  .hero h1{font-size:4.45vw;max-width:none;line-height:1}
+  .hero h1 .accent{white-space:nowrap}
+  .hero-divider{margin:2vw 0 2.2vw}
+  .hero-ctas .btn{font-size:1.2vw;padding:1.15vw 1.7vw}
+  .stats{margin-bottom:2vw}
+  .stats li{font-size:max(.85rem,.95vw)}
+  /* servicios */
+  .services{padding-top:6.5vw;padding-bottom:5vw}
+  .services-head{margin-bottom:1.6vw}
+  .services-head .h-lg{font-size:4.1vw;line-height:1}
+  .services-head p{font-size:1.4vw;margin-top:.6vw}
+  .services .grid-3{gap:1.1vw}
+  .services .card-img{min-height:15.5vw}
+  .services .card-body h3{font-size:1.45vw}
+  .services .card-body p{font-size:max(.85rem,.95vw)}
+  /* plataforma */
+  .platform .eyebrow{font-size:.95vw;margin-bottom:1vw}
+  .platform .h-lg{font-size:4.6vw;line-height:1;white-space:nowrap}
+  .feature-list{margin-top:2.6vw;gap:1.9vw}
+  .feature-list li{font-size:1.3vw;gap:2.2vw}
+  .feature-list svg{width:2.9vw;height:2.9vw}
+  /* fulfillment */
+  .fulfillment{padding-top:8vw}
+  .ff-content{max-width:33vw}
+  .ff-content h2{font-size:4vw;line-height:1}
+  .ff-content h3{font-size:2.3vw;margin:1.3vw 0 1vw;line-height:1.08}
+  .ff-content p{font-size:1.2vw;margin-bottom:1.6vw}
+  .icon-cards{gap:.8vw;margin-top:1.4vw}
+  .icon-card h3{font-size:1.5vw}
+  .icon-card p{font-size:max(.85rem,1vw)}
+  /* operación */
+  .op-wrap{width:min(1300px,82vw)}
+  .op-wrap h2{font-size:3.6vw;line-height:1;margin-bottom:1.4vw}
+  .video-frame{aspect-ratio:16/5.4}
+  .op-card{min-height:11vw}
+  .op-card .card-body h3{font-size:1.55vw}
+  /* faq */
+  .faq-grid{grid-template-columns:.78fr 1.22fr;gap:4vw;align-items:center}
+  .faq-intro{position:static}
+  .faq-intro .eyebrow{letter-spacing:.3em;font-size:.85vw;white-space:nowrap}
+  .faq-intro .h-md{font-size:3.4vw;line-height:1.02}
+  .faq-intro p{font-size:1.3vw}
+  .faq-q{font-size:1.15vw;padding:1.2vw 1.8vw}
+  .faq-a p{font-size:max(.9rem,1vw)}
+  /* blog */
+  .blog .h-md{font-size:3.2vw}
+  /* repartí */
+  .driver-grid{grid-template-columns:32% 1fr 30%}
+  .driver-text .h-lg{font-size:4.4vw;line-height:1;white-space:nowrap}
+  .driver-text p{font-size:1.3vw;max-width:26vw}
+  .driver-text .eyebrow{font-size:.9vw}
+  /* contacto */
+  .contact-grid{grid-template-columns:1fr .95fr;gap:4vw}
+  .contact-text .h-lg{font-size:4vw;line-height:1}
+  .contact-text .lead{font-size:1.4vw;max-width:34vw}
+  .contact-list li{font-size:1.45vw}
+}
+@media (min-width:921px){
+  .hero h1{max-width:38vw}
+  .brand img{height:62px}
+  .services .card-img{min-height:17.5vw}
+  .ff-content h3{max-width:28vw}
+  .icon-card .ico{width:4.6vw;height:4.6vw}.icon-card svg{width:3.1vw;height:3.1vw}
+}
