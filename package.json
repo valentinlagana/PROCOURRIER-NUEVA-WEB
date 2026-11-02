@@ -1,0 +1,10 @@
+{
+  "name": "procourrier-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio Procourrier — rediseño (HTML/CSS/JS estático)",
+  "scripts": {
+    "build:blog": "node scripts/build-blog.js",
+    "start": "npx --yes serve -l 3000 ."
+  }
+}
