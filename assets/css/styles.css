@@ -697,3 +697,17 @@ section.integrations{padding:0}
   .driver-bg>img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 12%,#000 85%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 12%,#000 85%,transparent 100%);mask-composite:intersect}
   .driver-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 40% 60% at 10% 50%,rgba(10,10,10,.75),transparent 70%)}
 }
+/* repartí v6: foto completa, sin zoom, a la derecha del texto */
+@media (min-width:921px){
+  .driver{min-height:0;height:auto;padding:0}
+  .driver-bg img{left:auto;right:0;top:0;width:80%;height:100%;object-fit:cover;object-position:center}
+  .driver-grid{min-height:45vw;padding:4vw 0;grid-template-columns:30% 1fr 27%;align-items:center}
+  .driver-text .h-lg{font-size:4vw}
+  .driver-text p{max-width:24vw}
+  .driver-bg::after{background:linear-gradient(90deg,#0a0a0a 18%,rgba(10,10,10,.55) 26%,transparent 36%)}
+}
+@media (max-width:920px){
+  .driver-bg img{object-position:28% top}
+  .driver-bg::after{background:linear-gradient(180deg,rgba(10,10,10,.55),rgba(10,10,10,.85) 45%,#0a0a0a)!important}
+}
+@media (max-width:920px){.driver-bg::after{background:linear-gradient(180deg,rgba(10,10,10,.78),rgba(10,10,10,.9) 50%,#0a0a0a)!important}}
