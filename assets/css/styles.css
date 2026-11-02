@@ -594,3 +594,83 @@ textarea.input{min-height:90px;resize:vertical}
   .ff-content h3{max-width:28vw}
   .icon-card .ico{width:4.6vw;height:4.6vw}.icon-card svg{width:3.1vw;height:3.1vw}
 }
+
+/* ===== v4: cajas más compactas, hero más chico, transiciones continuas ===== */
+:root{--bg:#0a0a0a}
+body,.services,.platform,.integrations,.fulfillment,.operation,.faq,.blog,.driver,.contact,.hero,.site-footer{background:#0a0a0a}
+/* fundido superior e inferior de cada fondo hacia el mismo negro */
+.sec-bg>img,.hero-media>img,.ff-media>img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 82%,transparent 100%)}
+.hero-media>img{-webkit-mask-image:linear-gradient(180deg,#000 0,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 80%,transparent 100%)}
+.services .sec-bg-top>img,.blog .sec-bg-top>img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 55%,transparent 100%)}
+.operation{background:radial-gradient(ellipse 70% 50% at 50% 40%,#161616,#0a0a0a 70%)}
+.site-footer{border-top:0}
+.section{padding:90px 0}
+@media (min-width:921px){
+  .hero h1{font-size:3.7vw;max-width:32vw}
+  .hero-ctas .btn{font-size:1.05vw;padding:1vw 1.5vw;border-radius:14px}
+  /* barra de indicadores */
+  .stats{padding:14px 8px;border-radius:14px}
+  .stats li{font-size:max(.8rem,.85vw);gap:10px}
+  .stats svg,.stats img{width:28px;height:28px}
+  /* tarjetas de servicios / operación */
+  .services .grid-3{gap:.9vw;max-width:88%}
+  .services .card-img{min-height:14.5vw}
+  .services .card-body,.op-card .card-body{padding:1vw 1.3vw}
+  .services .card-body h3{font-size:1.2vw}
+  .services .card-body p,.op-card .card-body p{font-size:max(.78rem,.82vw)}
+  .op-card{min-height:9.5vw}
+  .op-card .card-body h3{font-size:1.3vw}
+  .card-img .arrow-circle{width:2.2vw;height:2.2vw;min-width:30px;min-height:30px}
+  /* fulfillment */
+  .icon-cards{gap:.7vw;max-width:88%}
+  .icon-card{padding:1vw 1.2vw;gap:1.1vw}
+  .icon-card .ico{width:3.8vw;height:3.8vw}.icon-card svg{width:2.5vw;height:2.5vw}
+  .icon-card h3{font-size:1.25vw;margin-bottom:3px}
+  .icon-card p{font-size:max(.78rem,.85vw)}
+  /* integraciones */
+  .integ-stage .platform-card strong{font-size:1.8vw}
+  .p-ml strong{font-size:1.55vw}
+  .integ-stage .platform-card img{width:4vw;max-height:3.6vw}
+  .integrations .other-platform{left:14%;right:14%;padding:.9vw 2vw}
+  .integrations .other-platform strong{font-size:1.45vw}
+  .integrations .other-platform span{font-size:1.1vw}
+  /* faq */
+  .faq-panel{padding:14px;max-width:46vw;justify-self:end;width:100%}
+  .faq-tab{padding:.75vw .6vw;font-size:.9vw;gap:8px}
+  .faq-tab svg{width:18px;height:18px}
+  .faq-search input{padding:10px 14px 10px 42px;font-size:.9rem}
+  .faq-list{gap:8px}
+  .faq-q{font-size:.98vw;padding:.95vw 1.4vw}
+  .faq-a p{font-size:max(.82rem,.88vw);padding:0 1.4vw 1vw}
+  /* blog */
+  .blog .grid-3{gap:.9vw}
+  .blog-card .body{padding:14px 18px 16px}
+  .blog-card h3{font-size:1.15vw}
+  .blog-card ul,.read-time,.read-more{font-size:max(.78rem,.8vw)}
+  .blog-cta{padding:1.4vw 2.6vw}
+  .blog-cta h3{font-size:1.7vw}
+  .blog-cta .btn{padding:.8vw 2.6vw;font-size:1vw}
+  /* formularios */
+  .form-card{padding:1.8vw 1.8vw}
+  .driver-grid{grid-template-columns:34% 1fr 26%}
+  .contact-grid{grid-template-columns:1fr .8fr}
+  .field{margin-bottom:1vw}
+  fieldset.field{margin-bottom:1vw}
+  .field>label,.field legend{font-size:max(.82rem,.88vw);margin-bottom:.45vw}
+  .input{padding:.65vw .9vw;font-size:max(.82rem,.88vw);border-radius:8px}
+  .seg label{padding:.65vw}
+  .radio{font-size:max(.8rem,.85vw)}
+  .radio input{width:18px;height:18px}.radio input::before{width:8px;height:8px}
+  .radios{gap:.5vw 1.4vw}
+  .form-submit{padding:.85vw;font-size:max(.9rem,1vw)}
+  .form-submit.square{font-size:max(.95rem,1.1vw)}
+  .form-note{font-size:max(.72rem,.75vw)}
+  .select-list li{padding:.45vw 1vw;font-size:max(.82rem,.88vw)}
+}
+section.integrations{padding:0}
+@media (min-width:921px){
+  .integrations .sec-bg>img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 90%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 90%,transparent 100%)}
+  .services .grid-3,.icon-cards{max-width:none}
+}
+@media (max-width:920px){section.integrations{padding:80px 0}}
+@media (min-width:921px){.p-woo strong{font-size:1.5vw}.p-woo{gap:1.1vw}}
