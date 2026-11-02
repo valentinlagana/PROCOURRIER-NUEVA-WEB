@@ -723,3 +723,10 @@ section.integrations{padding:0}
 .integ-stage .platform-card:hover{box-shadow:0 0 1.6vw rgba(226,122,66,.3)}
 .faq-tab[aria-selected=true]{box-shadow:none}
 .form-card{border-color:rgba(226,122,66,.35)}
+
+/* ===== v8: balance luz / naranja ===== */
+:root{--orange:#ec7b37;--orange-2:#f3914f;--orange-glow:rgba(236,123,55,.28)}
+.sec-bg img,.hero-media img,.ff-media img,.card-img>img,.blog-card .thumb img,.video-frame video,.integ-center img{filter:saturate(.88) contrast(.98) brightness(1.04)}
+.btn-primary{background:linear-gradient(180deg,#f0904f,#e2722f);box-shadow:0 8px 24px -12px rgba(236,123,55,.45)}
+.video-frame{box-shadow:0 0 30px -10px rgba(236,123,55,.35)}
+.integ-stage .platform-card:hover{box-shadow:0 0 1.8vw rgba(236,123,55,.35)}
