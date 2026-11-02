@@ -735,3 +735,7 @@ section.integrations{padding:0}
 .integ-stage .platform-card:hover{box-shadow:0 0 1.2vw rgba(220,120,64,.25)}
 .form-card{border-color:rgba(220,120,64,.28)}
 .hero h1 .accent,.accent{text-shadow:0 2px 14px rgba(0,0,0,.55)}
+/* hero: reflejos del piso atenuados */
+.hero-media::before{content:"";position:absolute;left:0;right:0;bottom:0;height:48%;z-index:1;pointer-events:none;
+  -webkit-backdrop-filter:saturate(.55) brightness(.72);backdrop-filter:saturate(.55) brightness(.72);
+  -webkit-mask-image:linear-gradient(0deg,#000 55%,transparent);mask-image:linear-gradient(0deg,#000 55%,transparent)}
