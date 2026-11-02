@@ -10,7 +10,11 @@
 
   /* ---------- Header / nav ---------- */
   var header = $('.site-header');
-  var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 20); };
+  var bar = $('.scroll-progress');
+  var onScroll = function () {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+    if (bar) { var h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')'; }
+  };
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   var toggle = $('.menu-toggle');
@@ -193,6 +197,8 @@
       var status = $('.form-status', form);
       if (!validate(form)) { status.className = 'form-status show'; status.textContent = 'Revisá los campos marcados para continuar.'; return; }
       var url = waLink(build(new FormData(form)));
+      var btn = $('button[type=submit]', form);
+      if (btn) { btn.classList.add('is-loading'); setTimeout(function () { btn.classList.remove('is-loading'); }, 1200); }
       status.className = 'form-status show';
       status.innerHTML = 'Preparamos tu mensaje. Si WhatsApp no se abrió, <a href="' + url + '" target="_blank" rel="noopener">tocá acá para abrirlo</a>. Revisalo y envialo desde WhatsApp.';
       window.open(url, '_blank', 'noopener');

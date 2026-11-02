@@ -12,10 +12,11 @@
 <link rel="icon" href="assets/img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/v2.css">
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
+<div class="scroll-progress" aria-hidden="true"></div>
 
 <header class="site-header" id="top">
   <nav class="container nav" aria-label="Principal">
@@ -82,10 +83,9 @@
   <div class="sec-bg sec-bg-top"><img src="assets/bg/servicios.webp" alt="" width="1672" height="941" loading="lazy"></div>
   <div class="container">
     <div class="services-head">
-      <div class="reveal">
-        <h2 id="srv-title" class="h-lg">Una solución<br>para cada <span class="accent">envío.</span></h2>
-        <p>Toda tu logística, conectada a una misma operación.</p>
-      </div>
+      <div class="reveal"><p class="eyebrow">Servicios</p>
+        <h2 id="srv-title" class="h-lg">Una solución<br>para cada <span class="accent">envío.</span></h2></div>
+      <p class="reveal">Toda tu logística, conectada a una misma operación.</p>
     </div>
     <div class="grid-3" id="service-cards">
       <button class="card-img reveal" type="button" data-service="flex" aria-controls="service-detail">
@@ -140,6 +140,7 @@
   <div class="container">
     <div class="integ-stage">
       <div class="integ-title reveal">
+        <p class="eyebrow">Integraciones</p>
         <h2 id="int-title" class="h-lg">Nos integramos<br>a todas las<br>plataformas.</h2>
         <p>Conectá tu tienda con tu operación logística.</p>
       </div>
@@ -194,10 +195,10 @@
       <button class="video-play" type="button" aria-label="Reproducir video"><svg aria-hidden="true"><use href="assets/icons.svg#play"/></svg></button>
     </div>
     <div class="grid-2">
-      <a class="card-img op-card reveal" href="#fulfillment"><img src="assets/img/op-deposito.webp" alt="" loading="lazy"><span class="card-body"><span><h3>Depósito propio</h3><p>Control y organización<br>de tus paquetes.</p></span><span class="arrow-circle"><svg aria-hidden="true"><use href="assets/icons.svg#chev-right"/></svg></span></span></a>
-      <a class="card-img op-card reveal" href="#servicios"><img src="assets/img/op-flota.webp" alt="" loading="lazy"><span class="card-body"><span><h3>Flota dedicada</h3><p>Utilitarios propios para<br>colectas y entregas.</p></span><span class="arrow-circle"><svg aria-hidden="true"><use href="assets/icons.svg#chev-right"/></svg></span></span></a>
+      <a class="card-img op-card reveal" href="#fulfillment"><img src="assets/img/op-deposito.webp" alt="" loading="lazy"><span class="card-body"><span><h3>Depósito propio</h3><p>Control y organizaciónde tus paquetes.</p></span><span class="arrow-circle"><svg aria-hidden="true"><use href="assets/icons.svg#chev-right"/></svg></span></span></a>
+      <a class="card-img op-card reveal" href="#servicios"><img src="assets/img/op-flota.webp" alt="" loading="lazy"><span class="card-body"><span><h3>Flota dedicada</h3><p>Utilitarios propios para colectas y entregas.</p></span><span class="arrow-circle"><svg aria-hidden="true"><use href="assets/icons.svg#chev-right"/></svg></span></span></a>
       <a class="card-img op-card reveal" href="#repartidores"><img src="assets/img/op-equipo.webp" alt="" loading="lazy"><span class="card-body"><span><h3>Equipo en zona</h3><p>Transportistas en CABA y GBA.</p></span><span class="arrow-circle"><svg aria-hidden="true"><use href="assets/icons.svg#chev-right"/></svg></span></span></a>
-      <a class="card-img op-card reveal" href="#contacto"><img src="assets/img/op-atencion.webp" alt="" loading="lazy"><span class="card-body"><span><h3>Atención al cliente</h3><p>Cuidamos tu reputación<br>en Mercado Libre.</p></span><span class="arrow-circle"><svg aria-hidden="true"><use href="assets/icons.svg#chev-right"/></svg></span></span></a>
+      <a class="card-img op-card reveal" href="#contacto"><img src="assets/img/op-atencion.webp" alt="" loading="lazy"><span class="card-body"><span><h3>Atención al cliente</h3><p>Cuidamos tu reputación en Mercado Libre.</p></span><span class="arrow-circle"><svg aria-hidden="true"><use href="assets/icons.svg#chev-right"/></svg></span></span></a>
     </div>
   </div>
 </section>
