@@ -849,7 +849,7 @@ a.btn { text-decoration: none; }
   </main>
 </div>
 
-<script src="amba.js"></script>
+<script src="/cotizador/amba.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 'use strict';
@@ -1073,7 +1073,7 @@ const MAPA = { lonMin: -59.941406, lonMax: -57.65625, latMin: -35.603719, latMax
 const [bx0, by0] = px(MAPA.lonMin, MAPA.latMax);
 const [bx1, by1] = px(MAPA.lonMax, MAPA.latMin);
 const base = el('image', {
-  href: 'basemap.jpg', x: bx0, y: by0, width: bx1 - bx0, height: by1 - by0,
+  href: '/cotizador/basemap.jpg', x: bx0, y: by0, width: bx1 - bx0, height: by1 - by0,
   preserveAspectRatio: 'none',
 });
 
