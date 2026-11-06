@@ -754,3 +754,21 @@ section.integrations{padding:0}
 .quote-visual img{filter:saturate(.85)}
 .quote-visual::after{background:linear-gradient(135deg,rgba(10,10,10,0),rgba(10,10,10,.25))}
 .quote-pin{display:none}
+
+/* ===== Cobertura ===== */
+.coverage{padding:90px 0;background:#0a0a0a}
+.coverage-head{max-width:760px;margin-bottom:32px}
+.coverage-head .lead{margin-top:16px}
+.coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cov-group{border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#121214;transition:border-color .25s}
+.cov-group[open]{border-color:rgba(220,120,64,.45)}
+.cov-group summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.cov-group summary::-webkit-details-marker{display:none}
+.cov-group summary::after{content:"+";color:var(--orange);font-size:1.3rem;transition:transform .25s}
+.cov-group[open] summary::after{transform:rotate(45deg)}
+.cov-group ul{list-style:none;margin:0;padding:0 22px 20px;display:flex;flex-wrap:wrap;gap:8px}
+.cov-group li{padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.86rem;color:#d9d4ce}
+.coverage-note{margin-top:22px;color:#b9b6b2}
+.coverage-note a{color:var(--orange-2)}
+@media (max-width:760px){.coverage-grid{grid-template-columns:1fr}}
+.coverage-grid{align-items:start}
