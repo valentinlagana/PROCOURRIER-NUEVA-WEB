@@ -2,6 +2,7 @@
 // Uso: node scripts/build-blog.js
 const fs = require('fs'), path = require('path');
 const { blog, WA } = require('../assets/js/data.js');
+const SITE = require('./site.json').url;
 const root = path.join(__dirname, '..');
 const I = (id, s = '') => `<svg aria-hidden="true"${s}><use href="../assets/icons.svg#${id}"/></svg>`;
 const wa = t => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
@@ -14,7 +15,20 @@ blog.forEach((p, i) => {
 <title>${p.title} | Blog Procourrier</title>
 <meta name="description" content="${p.desc}">
 <meta name="theme-color" content="#0b0b0c">
-<link rel="icon" href="../assets/img/logo.webp">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="${SITE}/blog/${p.slug}.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Procourrier">
+<meta property="og:url" content="${SITE}/blog/${p.slug}.html">
+<meta property="og:title" content="${p.title}">
+<meta property="og:description" content="${p.desc}">
+<meta property="og:image" content="${SITE}/assets/img/og-procourrier.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@type':'BlogPosting',headline:p.title,description:p.desc,inLanguage:'es-AR',image:SITE+'/assets/img/'+p.img+'.webp',mainEntityOfPage:SITE+'/blog/'+p.slug+'.html',timeRequired:'PT'+p.min+'M',author:{'@type':'Organization',name:'Procourrier'},publisher:{'@type':'Organization',name:'Procourrier',logo:{'@type':'ImageObject',url:SITE+'/assets/img/logo.webp'}}})}</script>
+<script src="/assets/js/analytics.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css">

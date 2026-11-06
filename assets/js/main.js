@@ -6,6 +6,7 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var icon = function (id, cls) { return '<svg aria-hidden="true"' + (cls ? ' class="' + cls + '"' : '') + '><use href="assets/icons.svg#' + id + '"/></svg>'; };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var T = function (n, p) { if (window.PCtrack) window.PCtrack(n, p); };
   var waLink = function (text) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); };
 
   /* ---------- Header / nav ---------- */
@@ -65,6 +66,7 @@
       '<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-primary" target="_blank" rel="noopener" href="' + waLink('Hola Procourrier. ' + s.msg) + '">' + icon('whatsapp') + ' Consultar por WhatsApp</a>' +
       '<a class="btn btn-ghost" href="#contacto" data-prefill="' + esc(s.msg) + '">Pedir cotización ' + icon('chev-right') + '</a></div>';
     detail.classList.add('show');
+    T('servicio_detalle', { servicio: key });
     $$('#service-cards .card-img').forEach(function (c) { c.setAttribute('aria-expanded', String(c.dataset.service === key)); });
     if (focus) detail.focus({ preventScroll: true });
   };
@@ -84,7 +86,7 @@
   var frame = $('#video-frame'), video = $('#op-video');
   if (video) {
     $('.video-play', frame).addEventListener('click', function () { var p = video.play(); if (p && p.catch) p.catch(function () {}); });
-    video.addEventListener('play', function () { frame.classList.add('playing'); });
+    video.addEventListener('play', function () { frame.classList.add('playing'); T('video_play'); });
     video.addEventListener('pause', function () { if (video.currentTime === 0) frame.classList.remove('playing'); });
     var src = $('source', video);
     src.addEventListener('error', function () {
@@ -119,9 +121,11 @@
     var b = e.target.closest('.faq-q'); if (!b) return;
     var item = b.closest('.faq-item'), open = !item.classList.contains('open');
     item.classList.toggle('open', open); b.setAttribute('aria-expanded', String(open));
+    if (open) T('faq_abrir', { pregunta: b.textContent.trim().slice(0, 80) });
   });
   var selectTab = function (t) {
     current = t.dataset.cat; search.value = '';
+    T('faq_pestana', { categoria: current });
     tabs.forEach(function (x) { var s = x === t; x.setAttribute('aria-selected', String(s)); x.tabIndex = s ? 0 : -1; });
     list.setAttribute('aria-labelledby', t.id); renderFaq();
   };
@@ -191,8 +195,9 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var status = $('.form-status', form);
-      if (!validate(form)) { status.className = 'form-status show'; status.textContent = 'Revisá los campos marcados para continuar.'; return; }
+      if (!validate(form)) { T('formulario_error', { formulario: form.id }); status.className = 'form-status show'; status.textContent = 'Revisá los campos marcados para continuar.'; return; }
       var url = waLink(build(new FormData(form)));
+      T('formulario_enviado', { formulario: form.id });
       status.className = 'form-status show';
       status.innerHTML = 'Preparamos tu mensaje. Si WhatsApp no se abrió, <a href="' + url + '" target="_blank" rel="noopener">tocá acá para abrirlo</a>. Revisalo y envialo desde WhatsApp.';
       window.open(url, '_blank', 'noopener');
