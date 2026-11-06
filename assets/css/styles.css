@@ -739,3 +739,18 @@ section.integrations{padding:0}
 .hero-media::before{content:"";position:absolute;left:0;right:0;bottom:0;height:48%;z-index:1;pointer-events:none;
   -webkit-backdrop-filter:saturate(.55) brightness(.72);backdrop-filter:saturate(.55) brightness(.72);
   -webkit-mask-image:linear-gradient(0deg,#000 55%,transparent);mask-image:linear-gradient(0deg,#000 55%,transparent)}
+
+/* ===== Cotizador (sección de acceso) ===== */
+.quote-band{padding:90px 0;background:#0a0a0a}
+.quote-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.quote-text .lead{margin:18px 0 28px;color:#d9d4ce}
+.quote-visual{position:relative;display:block;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);aspect-ratio:16/10;box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.quote-visual img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.85);transition:transform .8s ease}
+.quote-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.1),rgba(10,10,10,.55))}
+.quote-visual:hover img{transform:scale(1.04)}
+.quote-pin{position:absolute;left:52%;top:46%;z-index:1;width:18px;height:18px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 8px rgba(220,120,64,.25)}
+.quote-pin::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--orange);animation:pulse 2.4s infinite}
+@media (max-width:920px){.quote-grid{grid-template-columns:1fr;gap:32px}}
+.quote-visual img{filter:saturate(.85)}
+.quote-visual::after{background:linear-gradient(135deg,rgba(10,10,10,0),rgba(10,10,10,.25))}
+.quote-pin{display:none}
