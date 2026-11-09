@@ -3,7 +3,7 @@
 // Si cambia el dominio definitivo, cambiá SITE y volvé a correr ambos scripts.
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
-const { faq, blog } = require('../assets/js/data.js');
+const { faq, blog } = require('../assets/js/data.js?v=1794229065');
 const SITE = require('./site.json').url; // p. ej. https://procourier.com.ar
 global.window = {}; require('../cotizador/amba.js');
 const Z = window.AMBA.features.map(f => f.properties).filter(p => p.enRed);
@@ -86,7 +86,7 @@ const head = `<!-- SEO:START (generado por scripts/build-seo.js) -->
 ${ld(business)}
 ${ld(website)}
 ${ld(faqLd)}
-<script src="/assets/js/analytics.js" defer></script>
+<script src="/assets/js/analytics.js?v=1794229065" defer></script>
 <!-- SEO:END -->`;
 
 // --- index.html: reemplaza el bloque entre marcadores (o las etiquetas viejas la primera vez)
