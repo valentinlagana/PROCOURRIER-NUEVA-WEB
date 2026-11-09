@@ -863,3 +863,17 @@ section.integrations{padding:0}
   .nav-links>li>a.active::after{left:0;right:0;bottom:0;transform:scaleX(1)!important}
 }
 .nav-links a[aria-current]{border-bottom:2px solid var(--orange);border-radius:0;padding-bottom:.35vw}
+/* hero: foto camioneta estacionada */
+@media (min-width:921px){
+  .hero-v3 .hero-media img{left:auto!important;right:0;width:76%!important;object-position:center!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%)!important;mask-image:linear-gradient(90deg,transparent,#000 14%)!important}
+  .hero-v3 .hero-media::after{background:linear-gradient(0deg,rgba(8,8,8,.5),transparent 16%)!important}
+}
+@media (max-width:920px){.hero-v3 .hero-media img{object-position:62% center}}
+@media (min-width:921px){
+  .hero-v3{min-height:max(100vh,46vw)!important}
+  .hero-v3 .hero-media img{width:64%!important;height:100%!important;object-fit:contain!important;object-position:right center!important;
+   -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%),linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)!important;-webkit-mask-composite:source-in!important;
+   mask-image:linear-gradient(90deg,transparent,#000 12%),linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)!important;mask-composite:intersect!important}
+}
+@media (min-width:921px){.hero-v3 .hero-media img{-webkit-mask-image:none!important;mask-image:none!important}}
+.hero-v3,.hero-v3 .hero-media{background:#0a0a0a}
