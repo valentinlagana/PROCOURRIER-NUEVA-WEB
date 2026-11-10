@@ -136,8 +136,6 @@ const cob = `<!-- COBERTURA:START (generado por scripts/build-seo.js) -->
   </div>
 </section>
 <!-- COBERTURA:END -->`;
-if (html.includes('<!-- COBERTURA:START')) html = html.replace(/<!-- COBERTURA:START[\s\S]*?<!-- COBERTURA:END -->/, cob);
-else html = html.replace('<!-- COTIZADOR -->', cob + '\n\n<!-- COTIZADOR -->');
 fs.writeFileSync(ip, html);
 
 // --- sitemap.xml y robots.txt
