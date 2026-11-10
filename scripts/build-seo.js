@@ -107,16 +107,30 @@ const chips = a => a.map(n => `<li>${n}</li>`).join('');
 const cob = `<!-- COBERTURA:START (generado por scripts/build-seo.js) -->
 <section class="coverage" id="cobertura" aria-labelledby="cob-title">
   <div class="container">
-    <div class="coverage-head reveal">
-      <p class="eyebrow line-after">Cobertura</p>
-      <h2 id="cob-title" class="h-lg">Envíos en el día en <span class="accent">CABA y GBA.</span></h2>
-      <p class="lead">Hacemos Mercado Envíos Flex, envíos e-commerce y mensajería en ${todas.length} barrios y localidades del AMBA. Buscá la tuya:</p>
+    <div class="coverage-top">
+      <div class="coverage-head reveal">
+        <p class="pill-eyebrow"><span class="dot" aria-hidden="true"></span>Cobertura</p>
+        <h2 id="cob-title" class="h-lg">Envíos en el día en <span class="accent">CABA y GBA.</span></h2>
+        <p class="lead">Mercado Envíos Flex, envíos e-commerce y mensajería en ${todas.length} barrios y localidades del AMBA.</p>
+      </div>
+      <ul class="cov-stats reveal">
+        <li class="c0"><strong>${zonas.caba.length}</strong>Barrios de CABA</li>
+        <li class="c1"><strong>${zonas.c1.length}</strong>Primer cordón</li>
+        <li class="c2"><strong>${zonas.c2.length}</strong>Segundo cordón</li>
+        <li class="c3"><strong>${zonas.c3.length}</strong>Tercer cordón</li>
+      </ul>
+    </div>
+    <div class="cov-search reveal">
+      <label class="sr-only" for="cov-q">Buscá tu barrio o localidad</label>
+      <svg aria-hidden="true"><use href="assets/icons.svg#search"/></svg>
+      <input id="cov-q" type="search" placeholder="Buscá tu barrio o localidad…" autocomplete="off">
+      <span class="cov-result" aria-live="polite"></span>
     </div>
     <div class="coverage-grid">
-      <details class="cov-group reveal" open><summary>CABA · ${zonas.caba.length} barrios</summary><ul>${chips(zonas.caba)}</ul></details>
-      <details class="cov-group reveal"><summary>GBA primer cordón · ${zonas.c1.length} localidades</summary><ul>${chips(zonas.c1)}</ul></details>
-      <details class="cov-group reveal"><summary>GBA segundo cordón · ${zonas.c2.length} localidades</summary><ul>${chips(zonas.c2)}</ul></details>
-      <details class="cov-group reveal"><summary>GBA tercer cordón · ${zonas.c3.length} localidades</summary><ul>${chips(zonas.c3)}</ul></details>
+      <details class="cov-group c0 reveal" open><summary><i></i>CABA · ${zonas.caba.length} barrios</summary><ul>${chips(zonas.caba)}</ul></details>
+      <details class="cov-group c1 reveal" open><summary><i></i>GBA primer cordón · ${zonas.c1.length} localidades</summary><ul>${chips(zonas.c1)}</ul></details>
+      <details class="cov-group c2 reveal" open><summary><i></i>GBA segundo cordón · ${zonas.c2.length} localidades</summary><ul>${chips(zonas.c2)}</ul></details>
+      <details class="cov-group c3 reveal" open><summary><i></i>GBA tercer cordón · ${zonas.c3.length} localidades</summary><ul>${chips(zonas.c3)}</ul></details>
     </div>
     <p class="coverage-note reveal">¿No ves tu zona? <a href="/cotizador/">Consultala en el cotizador</a> o <a href="https://wa.me/5491124064020?text=Hola%2C%20quiero%20saber%20si%20llegan%20a%20mi%20zona" target="_blank" rel="noopener">escribinos por WhatsApp</a>.</p>
   </div>

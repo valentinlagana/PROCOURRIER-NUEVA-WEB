@@ -223,3 +223,9 @@
 
   var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
 })();
+/* Buscador de cobertura */
+(function(){var q=document.getElementById('cov-q');if(!q)return;var out=document.querySelector('.cov-result');
+var n=function(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+q.addEventListener('input',function(){var v=n(q.value.trim()),hits=0;
+document.querySelectorAll('.cov-group').forEach(function(g){var c=0;g.querySelectorAll('li').forEach(function(li){var m=!v||n(li.textContent).indexOf(v)>-1;li.classList.toggle('hit',!!v&&m);li.hidden=!m;if(m)c++});g.hidden=!!v&&!c;if(v&&c)g.open=true;hits+=v?c:0});
+out.textContent=v?(hits?hits+' zona'+(hits>1?'s':'')+' con cobertura':'Sin resultados: consultanos por WhatsApp'):'';});})();
