@@ -997,3 +997,15 @@ section.integrations{padding:0}
   .quote-prices>span{padding:7px 6px}.quote-prices strong{font-size:.82rem}
 }
 .quote-band,.coverage,.pre-footer{position:relative;isolation:isolate}.quote-band>.container,.coverage>.container,.pre-footer>.container{position:relative;z-index:2}
+
+/* ===== Fondos nuevos (v2) ===== */
+/* Integraciones: el fondo ya no trae paneles, las tarjetas llevan su propio panel */
+@media (min-width:921px){
+  .integ-stage .platform-card{background:rgba(14,13,13,.72)!important;border:1px solid rgba(255,138,42,.45)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 20px 40px -20px rgba(0,0,0,.8)!important}
+  .integ-stage .platform-card:hover{border-color:rgba(255,138,42,.85)!important}
+}
+.integrations .sec-bg img{filter:brightness(.78) contrast(.92) saturate(.85)!important}
+.integrations .sec-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.55),rgba(8,8,8,.1) 45%,rgba(8,8,8,.25));opacity:1!important}
+/* Servicios: caja a la derecha, texto a la izquierda */
+.services .sec-bg-top img{object-position:right center}
+.integ-logo{display:none!important}
