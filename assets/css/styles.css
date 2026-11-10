@@ -1015,3 +1015,6 @@ section.integrations{padding:0}
 .driver-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.6) 0%,rgba(8,8,8,.15) 32%,transparent 50%,rgba(8,8,8,.15) 68%,rgba(8,8,8,.55) 100%)!important;opacity:1!important}
 @media (min-width:921px){.driver{min-height:56vw!important}.driver-grid{min-height:56vw!important}}
 .driver-bg::after{background:linear-gradient(90deg,rgba(8,8,8,.75) 0%,rgba(8,8,8,.45) 24%,transparent 42%,transparent 64%,rgba(8,8,8,.5) 100%)!important}.driver-text p{text-shadow:0 1px 8px rgba(0,0,0,.9)!important}
+/* Cotizador: foto de fondo visible */
+.quote-band .sec-bg img{opacity:1!important;filter:saturate(.9) brightness(.9)!important;object-position:center}
+.quote-band .sec-bg::after{background:linear-gradient(90deg,rgba(8,8,8,.82) 0%,rgba(8,8,8,.55) 40%,rgba(8,8,8,.35) 100%)!important}
