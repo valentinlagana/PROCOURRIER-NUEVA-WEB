@@ -1009,3 +1009,9 @@ section.integrations{padding:0}
 /* Servicios: caja a la derecha, texto a la izquierda */
 .services .sec-bg-top img{object-position:right center}
 .integ-logo{display:none!important}
+/* Repartí: foto nueva a pantalla completa, repartidor al centro */
+.driver-bg img{position:absolute!important;inset:0!important;left:0!important;right:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)!important;mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)!important}
+.driver-bg::before{display:none!important}
+.driver-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.6) 0%,rgba(8,8,8,.15) 32%,transparent 50%,rgba(8,8,8,.15) 68%,rgba(8,8,8,.55) 100%)!important;opacity:1!important}
+@media (min-width:921px){.driver{min-height:56vw!important}.driver-grid{min-height:56vw!important}}
+.driver-bg::after{background:linear-gradient(90deg,rgba(8,8,8,.75) 0%,rgba(8,8,8,.45) 24%,transparent 42%,transparent 64%,rgba(8,8,8,.5) 100%)!important}.driver-text p{text-shadow:0 1px 8px rgba(0,0,0,.9)!important}
