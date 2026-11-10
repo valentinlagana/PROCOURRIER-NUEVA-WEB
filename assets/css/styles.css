@@ -877,3 +877,9 @@ section.integrations{padding:0}
 }
 @media (min-width:921px){.hero-v3 .hero-media img{-webkit-mask-image:none!important;mask-image:none!important}}
 .hero-v3,.hero-v3 .hero-media{background:#0a0a0a}
+/* hero: foto depósito + camioneta, completa, sin velos */
+.hero-v3 .hero-media::before,.hero-v3 .hero-media::after{display:none!important;background:none!important}
+.hero-v3 .hero-media img{left:0!important;right:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center bottom!important;filter:none!important;-webkit-mask-image:none!important;mask-image:none!important}
+@media (min-width:921px){.hero-v3{min-height:50vw!important}}
+.hero-v3 h1,.hero-v3 .hero-eyebrow,.hero-v3 .hero-sub,.hero-v3 .hero-kpis span{text-shadow:0 1px 4px rgba(0,0,0,.7)!important}
+@media (max-width:920px){.hero-v3 .hero-media img{object-position:68% center!important}}
