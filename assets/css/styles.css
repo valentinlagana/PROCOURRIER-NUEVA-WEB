@@ -883,3 +883,7 @@ section.integrations{padding:0}
 @media (min-width:921px){.hero-v3{min-height:50vw!important}}
 .hero-v3 h1,.hero-v3 .hero-eyebrow,.hero-v3 .hero-sub,.hero-v3 .hero-kpis span{text-shadow:0 1px 4px rgba(0,0,0,.7)!important}
 @media (max-width:920px){.hero-v3 .hero-media img{object-position:68% center!important}}
+/* hero: viñeta leve en los bordes para contraste del texto */
+.hero-v3 .hero-media::after{display:block!important;content:"";position:absolute;inset:0;pointer-events:none;
+ background:radial-gradient(ellipse 85% 80% at 62% 48%,transparent 55%,rgba(6,6,6,.45) 100%),linear-gradient(90deg,rgba(6,6,6,.38) 0%,rgba(6,6,6,.12) 38%,transparent 55%)!important}
+@media (max-width:920px){.hero-v3 .hero-media::after{background:linear-gradient(0deg,rgba(6,6,6,.65) 0%,rgba(6,6,6,.2) 55%,rgba(6,6,6,.35) 100%)!important}}
