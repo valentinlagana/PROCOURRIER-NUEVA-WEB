@@ -13,7 +13,7 @@
     ecommerce: {
       title: 'Envíos E-commerce',
       lead: 'Same-day y next-day para tu tienda online, integrados con las principales plataformas.',
-      items: ['Integración con Shopify, Tiendanube, VTEX, WooCommerce y Magento.', 'Entregas same-day y next-day en CABA y GBA.', 'Tracking para vos y para tu comprador.', 'Gestión de reintentos y novedades.'],
+      items: ['Integración con Shopify, Tiendanube, VTEX, WooCommerce y Magento.', 'Entregas same-day y next-day en CABA y GBA.', 'Control de envíos para vos y para tu comprador.', 'Gestión de reintentos y novedades.'],
       msg: 'Quiero información sobre envíos para mi tienda online.'
     },
     larga: {
@@ -106,8 +106,8 @@
       bullets: ['7 criterios clave'],
       desc: 'Siete criterios clave para elegir el operador logístico adecuado para tu e-commerce.',
       body: '<p>Elegir operador logístico es elegir quién va a representar a tu marca en el último contacto con el cliente. Estos son los <strong>7 criterios clave</strong> para decidir bien.</p>' +
-        '<h2>7 criterios clave</h2><ol><li><strong>Cobertura:</strong> que llegue a las zonas donde están tus compradores.</li><li><strong>Cumplimiento de plazos:</strong> pedí indicadores reales de entregas en tiempo.</li><li><strong>Tecnología y tracking:</strong> trazabilidad en tiempo real para vos y tu comprador.</li><li><strong>Integraciones:</strong> que se conecte con tu plataforma de venta.</li><li><strong>Infraestructura propia:</strong> flota y depósito propios dan más control.</li><li><strong>Atención al cliente:</strong> un contacto directo que responda rápido.</li><li><strong>Escalabilidad:</strong> que acompañe tu crecimiento y tus picos de venta.</li></ol>' +
-        '<p>En Procourrier combinamos flota y depósito propios, plataforma propia de tracking e integraciones con las principales plataformas.</p>'
+        '<h2>7 criterios clave</h2><ol><li><strong>Cobertura:</strong> que llegue a las zonas donde están tus compradores.</li><li><strong>Cumplimiento de plazos:</strong> pedí indicadores reales de entregas en tiempo.</li><li><strong>Tecnología y control:</strong> control de envíos para vos y tu comprador.</li><li><strong>Integraciones:</strong> que se conecte con tu plataforma de venta.</li><li><strong>Infraestructura propia:</strong> flota y depósito propios dan más control.</li><li><strong>Atención al cliente:</strong> un contacto directo que responda rápido.</li><li><strong>Escalabilidad:</strong> que acompañe tu crecimiento y tus picos de venta.</li></ol>' +
+        '<p>En Procourrier combinamos flota y depósito propios, plataforma propia de control de envíos e integraciones con las principales plataformas.</p>'
     },
     {
       slug: 'como-reducir-reclamos-en-tus-envios', icon: 'chat', img: 'blog-reclamos', min: 4,
@@ -125,7 +125,7 @@
       desc: 'Por qué la última milla define la experiencia de compra y qué hace a una buena operación de entrega.',
       body: '<p>La <strong>última milla</strong> es el tramo final del envío: desde el depósito hasta la puerta del comprador. Es la etapa más visible y, muchas veces, la más costosa.</p>' +
         '<h2>Por qué es crítica</h2><ul><li>Es el único momento de contacto físico entre tu marca y el cliente.</li><li>Concentra la mayor parte de los reclamos.</li><li>Define si el comprador vuelve a elegirte.</li></ul>' +
-        '<h2>Qué hace a una buena última milla</h2><ul><li><strong>Planificación de rutas</strong> eficiente.</li><li><strong>Trazabilidad en tiempo real</strong> y prueba de entrega.</li><li><strong>Transportistas capacitados</strong> y en zona.</li><li><strong>Gestión de reintentos</strong> y comunicación con el comprador.</li></ul>'
+        '<h2>Qué hace a una buena última milla</h2><ul><li><strong>Planificación de rutas</strong> eficiente.</li><li><strong>Control de envíos</strong> y prueba de entrega.</li><li><strong>Transportistas capacitados</strong> y en zona.</li><li><strong>Gestión de reintentos</strong> y comunicación con el comprador.</li></ul>'
     },
     {
       slug: 'logistica-para-e-commerce-escalar-sin-caos', icon: 'bars', img: 'blog-escalar', min: 6,

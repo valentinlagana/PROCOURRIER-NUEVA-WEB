@@ -1,7 +1,7 @@
 // Genera las páginas individuales del blog en /blog a partir de assets/js/data.js?v=1794229065
 // Uso: node scripts/build-blog.js
 const fs = require('fs'), path = require('path');
-const { blog, WA } = require('../assets/js/data.js?v=1794229065');
+const { blog, WA } = require('../assets/js/data.js');
 const SITE = require('./site.json').url;
 const root = path.join(__dirname, '..');
 const I = (id, s = '') => `<svg aria-hidden="true"${s}><use href="../assets/icons.svg?v=1794229065#${id}"/></svg>`;

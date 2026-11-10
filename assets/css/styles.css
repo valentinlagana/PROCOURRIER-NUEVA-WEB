@@ -916,3 +916,13 @@ section.integrations{padding:0}
   .hero-v3 .hero-kpis span{font-size:.66vw!important}
 }
 @media (max-width:640px){.hero-v3 .hero-kpis{display:grid!important;grid-template-columns:repeat(3,1fr);width:100%}.hero-v3 .hero-kpis li{padding:12px 12px!important}.hero-v3 .hero-kpis strong{font-size:1.15rem!important}.hero-v3 .hero-kpis span{font-size:.6rem!important;letter-spacing:.06em}}
+
+/* ===== Menos sombreado: fondos más visibles en toda la web ===== */
+.sec-bg::after,.sec-bg::before,.ff-media::after,.driver-bg::after,.contact .sec-bg::after,.faq .sec-bg::after,.platform .sec-bg::after,.services .sec-bg-top::after,.blog .sec-bg-top::after{opacity:.6!important}
+.sec-bg img,.ff-media img,.card-img>img,.blog-card .thumb img{filter:saturate(.85) contrast(.97) brightness(1.06)!important}
+.sec-bg>img,.ff-media>img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+.blog .sec-bg-top img,.services .sec-bg-top img{opacity:1!important}
+.card-img::before{background:linear-gradient(0deg,rgba(8,8,8,.88) 16%,rgba(8,8,8,.15) 55%,transparent 75%)!important}
+/* Integraciones: menos brillo y contraste */
+.integrations .sec-bg img{filter:brightness(.82) contrast(.88) saturate(.85)!important}
+.integ-stage .platform-card:hover{box-shadow:0 0 1vw rgba(220,120,64,.18)!important}

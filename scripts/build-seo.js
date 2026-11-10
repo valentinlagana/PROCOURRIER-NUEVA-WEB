@@ -3,7 +3,7 @@
 // Si cambia el dominio definitivo, cambiá SITE y volvé a correr ambos scripts.
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
-const { faq, blog } = require('../assets/js/data.js?v=1794229065');
+const { faq, blog } = require('../assets/js/data.js');
 const SITE = require('./site.json').url; // p. ej. https://procourier.com.ar
 global.window = {}; require('../cotizador/amba.js');
 const Z = window.AMBA.features.map(f => f.properties).filter(p => p.enRed);
@@ -16,7 +16,7 @@ const zonas = {
 const todas = [].concat(zonas.caba, zonas.c1, zonas.c2, zonas.c3);
 
 const title = 'Procourrier | Envíos en el día CABA y GBA · Mercado Envíos Flex y Fulfillment';
-const desc = 'Logística para e-commerce: entregas en el día en CABA y GBA, Mercado Envíos Flex (Partner Certificado), fulfillment, logística inversa, colectas y tracking en tiempo real. Cotizá por WhatsApp.';
+const desc = 'Logística para e-commerce: entregas en el día en CABA y GBA, Mercado Envíos Flex (Partner Certificado), fulfillment, logística inversa, colectas y control de envíos. Cotizá por WhatsApp.';
 const og = SITE + '/assets/img/og-procourrier.jpg';
 
 const business = {
