@@ -1143,3 +1143,4 @@ section.integrations{padding:0}
   .site-header,.hero-v3{zoom:1.125}
 }
 @media (min-width:921px){.hero-v3{min-height:111.2vh!important}}
+@media (min-width:921px){.site-header,.hero-v3{zoom:1!important}.hero-v3{min-height:125vh!important}}
