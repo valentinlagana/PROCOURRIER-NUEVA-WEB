@@ -1143,3 +1143,9 @@ section.integrations{padding:0}
   .site-header,.hero-v3{zoom:1.125}
 }
 @media (min-width:921px){.hero-v3{min-height:111.2vh!important}}
+/* Áreas táctiles mínimas en celular (44px) */
+@media (max-width:920px){
+  .footer-grid a,.socials a,.nav-links a,.nav-links button,.read-more,.coverage-note a,.contact-list a{min-height:44px;display:inline-flex;align-items:center}
+  .socials a{min-width:44px}
+  .footer-grid ul{gap:2px!important}
+}
