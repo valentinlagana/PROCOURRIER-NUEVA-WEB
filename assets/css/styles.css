@@ -1136,3 +1136,4 @@ section.integrations{padding:0}
 }
 @media (max-width:760px){.ff-media::after{background:linear-gradient(180deg,rgba(8,8,8,.55),rgba(8,8,8,.8) 40%,#0a0a0a 75%)!important;opacity:1!important}}
 @media (max-width:760px){.blog-cta{background:#141314!important}.blog-cta .btn{width:100%;justify-content:center}}
+.brand img{mix-blend-mode:normal!important;image-rendering:auto}
